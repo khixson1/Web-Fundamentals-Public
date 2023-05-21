@@ -1,0 +1,193 @@
+/*MVP
+As a diligent student, I want to reward myself if I finish my homework, and 
+based on the time of day:
+
+I want a latte if it's before 10 am
+I want a hot chocolate it's between 10 am and 4 pm
+I want ice cream between 4 pm - 10 pm.
+If it's after 10 pm, I don't want anything other than sleep!*/
+
+//FEATURE 1
+//Create function with 2 parameters to test if you get reward and which reward you get depending on hour of the day
+function myReward(hwFinished, time) {      //hwFinished is a boolean to indicate if homework was finished
+    //convert time to AMPM time
+    if (time < 12) {
+        var timeNew =  time + ":00AM"
+    } else {
+        var timeNew = (time - 12) + ":00PM"
+    }
+    if (hwFinished == true) {              //time represented in hours of a 24 hour period
+        if (time >= 6 && time < 10) {                       //between 6am and 10am                     
+            console.log("The time is:", timeNew);
+            console.log("My reward is a latte");
+        } else if (time >= 10 && time < 16) {               //between 10am and 4pm
+            console.log("The time is:", timeNew);
+            console.log("My reward is a hot chocolate");
+        } else if (time >= 16 && time < 22) {               //between 4pm and 10pm
+            console.log("The time is:", timeNew);
+            console.log("My reward is an ice cream");
+        } else {
+            console.log("The time is:", timeNew);             //between 10pm and 6am
+            console.log("I am sleeping and don't want anything");
+        }
+    } else {
+        console.log("You did not finish your homework")
+        console.log("You don't deserve a reward")
+    }
+    
+}
+//call the function myReward()
+myReward(true,18);
+
+
+
+//FEATURE 2
+/*Building off Feature 1, I want to adjust the current conditions and add a new option 
+so that if the time is between 3 pm - 6 pm, I want to have it pick either ice cream or 
+hot chocolate depending on if the time is even or odd.*/
+
+//Create function with 2 parameters to test if you get reward and which reward you get depending on hour of the day
+function myReward2(hwFinished, time) {      //hwFinished is a boolean to indicate if homework was finished
+    //convert time to AMPM time
+    if (time < 12) {
+        var timeNew =  time + ":00AM"
+    } else {
+        var timeNew = (time - 12) + ":00PM"
+    }
+    if (hwFinished == true) {              //time represented in hours of a 24 hour period
+        if (time >= 6 && time < 10) {                       //between 6am and 10am                     
+            console.log("The time is:", timeNew);
+            console.log("My reward is a latte");
+        } else if (time >= 10 && time < 16) {               //between 10am and 4pm
+            console.log("The time is:", timeNew);
+            //add additional conditionals depending on additional time frame constraints and even/odd time
+            if (time >= 15 && time < 16) {
+                if (time % 2 == 0) {
+                    console.log("The time is even");
+                    console.log("My reward is an ice cream")
+                } else {
+                    console.log("The time is odd");
+                    console.log("My reward is a hot chocolate")
+                }
+            } else {
+                console.log("My reward is a hot chocolate")
+            }
+        } else if (time >= 16 && time < 22) {               //between 4pm and 10pm
+            //add additional conditionals depending on additional time frame constraints and even/odd time
+            console.log("The time is:", timeNew);
+            if (time >= 16 && time < 18) {
+                if (time % 2 == 0) {
+                    console.log("The time is even");
+                    console.log("My reward is an ice cream")
+                } else {
+                    console.log("The time is odd");
+                    console.log("My reward is a hot chocolate")
+                }
+            } else {
+                console.log("The time is:", timeNew)
+                console.log("My reward is an ice cream")
+            }
+        } else {
+            console.log("The time is:", timeNew);             //between 10pm and 6am
+            console.log("I am sleeping and don't want anything");
+        }
+    } else {
+        console.log("You did not finish your homework")
+        console.log("You don't deserve a reward")
+    }
+}
+//call the function with various times 
+myReward2(true,17);
+myReward2(true,16);
+myReward2(false,17);
+myReward2(true,4);
+myReward2(true,8);
+
+
+//FEATURE 3
+/*Building off Feature 2, I want my options for the 3 pm - 6 pm slot to be a random 
+selection: if the time is even, I want my selections to be ice cream, cookies, or candy. 
+If the time is odd, I want my selections to be hot chocolate, tea, or cake.*/
+
+//Create a random number generator function to select an index between 0 and 2
+function myRandom() {
+    var idx = Math.floor(Math.random() * 3); 
+    return idx
+}
+//Create function with 2 parameters to test if you get reward and which reward you get depending on hour of the day
+function myReward2(hwFinished, time) {      //hwFinished is a boolean to indicate if homework was finished
+    //convert time to AMPM time
+    if (time < 12) {
+        var timeNew =  time + ":00AM"
+    } else {
+        var timeNew = (time - 12) + ":00PM"
+    }
+    if (hwFinished == true) {              //time represented in hours of a 24 hour period
+        if (time >= 6 && time < 10) {                       //between 6am and 10am                     
+            console.log("The time is:", timeNew);
+            console.log("My reward is a latte");
+        } else if (time >= 10 && time < 16) {               //between 10am and 4pm
+            console.log("The time is:", timeNew);
+            //add additional conditionals depending on additional time frame constraints and even/odd time
+            if (time >= 15 && time < 16) {
+                //add additional random selection into reward choice if even/odd
+                if (time % 2 == 0) {
+                    var evenArr = ["ice cream", "cookies", "candy"];
+                    //call myRandom() function to select treat
+                    var myIndex = myRandom();
+                    var treat = evenArr[myIndex];
+                    console.log("The time is even");
+                    console.log("My reward is a", treat);
+                } else {
+                    var oddArr = ["hot chocolate", "tea", "cake"]
+                    //call myRandom() function to select treat
+                    var myIndex = myRandom();
+                    var treat = oddArr[myIndex];
+                    console.log("The time is odd");
+                    console.log("My reward is a", treat);
+                }
+            } else {
+                console.log("The time is:", timeNew)
+                console.log("My reward is a hot chocolate")
+            }
+        } else if (time >= 16 && time < 22) {               //between 4pm and 10pm
+            //add additional conditionals depending on additional time frame constraints and even/odd time
+            console.log("The time is:", timeNew);
+            if (time >= 16 && time < 18) {
+                if (time % 2 == 0) {
+                    var evenArr = ["ice cream", "cookies", "candy"];
+                    //call myRandom() function to select treat
+                    var myIndex = myRandom();
+                    var treat = evenArr[myIndex];
+                    console.log("The time is even");
+                    console.log("My reward is a", treat);
+                } else {
+                    var oddArr = ["hot chocolate", "tea", "cake"]
+                    //call myRandom() function to select treat
+                    var myIndex = myRandom();
+                    var treat = oddArr[myIndex];
+                    console.log("The time is odd");
+                    console.log("My reward is a", treat);
+                }
+            } else {
+                console.log("The time is:", timeNew)
+                console.log("My reward is an ice cream")
+            }
+        } else {
+            console.log("The time is:", timeNew);             //between 10pm and 6am
+            console.log("I am sleeping and don't want anything");
+        }
+    } else {
+        console.log("You did not finish your homework")
+        console.log("You don't deserve a reward")
+    }
+}
+//call the function with various times 
+myReward2(true,17);
+myReward2(true,17);
+myReward2(true,17);
+myReward2(true,17);
+myReward2(true,16);
+myReward2(true,16);
+myReward2(true,16);
+myReward2(true,16);
