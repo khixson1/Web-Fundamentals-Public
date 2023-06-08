@@ -1,0 +1,29 @@
+h1 {
+    color: white;
+    background-color: black;
+    text-align: left;
+    font-family: 'Arial';
+    font-weight: 600;
+  }
+
+h2 {
+    color: white;
+    background-color: rebeccapurple;
+    text-align: center;
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: lighter;
+  }
+
+h3 {
+    background-color: skyblue;
+    text-align: right;
+    text-decoration: underline;
+    font-family: 'Arial';
+    font-style: underline;
+    font-weight: lighter;
+}
+
+span {
+    color: cyan;
+}
