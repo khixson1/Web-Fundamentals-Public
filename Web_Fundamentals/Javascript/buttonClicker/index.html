@@ -1,0 +1,74 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Clicker</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav_bar">
+            <div class="nav_left">
+                <h1 id="my_title">Dojonary</h1>
+            </div>
+            <div class="nav_middle">
+                <form class="my_form" action="/form/submit" method="GET"> 
+                    <input id="search_bar" name="text" class="search" placeholder="Search here!">
+                </form>
+            </div>
+            <div class="nav_right">
+                <button class = "my_login" type="button" value="Login" onclick="switchText(this)">Login</button>
+            </div>
+        </div>
+        <div class="main_content">
+            <div class="left_panel">
+                <div class="top_box">
+                    <div class="top_box_left">
+                        <div class="word">
+                            <h1 class="line">ninja</h1>
+                            <h3 class="line ital">noun</h3>
+                            <h3 class="line">Plural: ninjas</h3>
+                        </div>
+                        <div class="like_button">
+                            <button class = "likes" type="submit" value="13 likes" onclick="alert('Ninja was liked')">13 likes</button>
+                        </div>
+                    </div>
+                    <div class="top_box_right">
+                        <div id="def1">
+                            <p>A practitioner skilled in the Japanese art of ninjutsu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_box">
+                    <div class="bottom_box_left">
+                        <div class="word">
+                            <h1 class="line" >ninja</h1>
+                            <h3 class="line ital" id="noun">noun</h3>
+                            <h3 class="line">Plural: <span class="ital">ninjas</span></h3>
+                        </div>
+                        <div class="like_button">
+                            <button class = "likes" type="button" value="37 likes" onclick="alert('Ninja was liked')" >37 likes</button>
+                        </div>
+                    </div>
+                    <div class="bottom_box_right">
+                        <div id="def2">
+                            <p>A programmer who breaks down problems with zen-like focus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_panel">
+                <div class="dojonary_title">
+                    <h2 id="my_font">Dojonary is defined by <span id="you">YOU</span></h2>
+                </div>
+                <form class="my_def_form" action="/form/submit" method="GET"> 
+                    <button id="input_bar" type="button" value ="Add Definition" onclick="removeButton(this)">Add Definition</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
