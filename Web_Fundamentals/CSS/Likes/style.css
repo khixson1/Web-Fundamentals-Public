@@ -1,0 +1,234 @@
+/* Reset/Normalization of padding/margin */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /*outline: 1px solid red;*/
+}
+
+/* Main Container */
+.container {
+    width: 850px;
+    height: 900px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+/* Navigation Bar */
+.top_bar {
+    width: 850px;
+    height: 80px;
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content:flex-start;
+    align-items:center
+}
+.title_div {
+    width: 250px;
+    height: 75px;
+    display:flex;
+    margin-left:15px;
+    justify-content: flex-start;
+    align-items: center;
+}
+#my_title {
+    padding: 15px;
+    font-weight: 500;
+}
+
+/* Sub-title Bar */
+.second_bar {
+    width: 850px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subtitle_div {
+    width: 250px;
+    height: 75x;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    text-align:center
+}
+#my_subtitle {
+    padding: 15px;
+    font-weight: 500;
+    text-align:center;
+}
+
+.my_form {
+    height: 40px;
+    width:250px;
+    display: flex;
+    align-items: center;
+}
+#search_bar {
+    height: 25px;
+    width: 200px;
+    align-items: center;
+}
+.my_login {
+    color: white;
+    background-color: rgb(65, 118, 221);
+    width: 100px;
+    height: 25px;
+    border: 1px solid  black;
+    margin: 10px;
+    font-size: 12pt;
+    text-align: top;
+    font-weight: light;
+    box-shadow: 3px 3px black;
+}
+
+/* This section styles the middle content */
+.main_content {
+    width: 850px;
+    height: 630px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* This styles the left panel */
+.left_panel {
+    width: 230px;
+    height: 330px;
+    border: 2px solid black;
+    display: block;
+    justify-content: center;
+}
+.profile_pic_container {
+    width: 230px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#user_pic {
+    width: 98px;
+    height: 98px;
+    margin-top:25px;
+    justify-content: center;
+    align-items: center;
+}
+.add_avatar {
+    height:98px;
+    width: 228px;
+    font-size: 12pt;
+    font-weight: 300;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.add_my_avatar {
+    height:50px;
+}
+.person_name {
+    height:70px;
+    width: 228px;
+    font-weight: 500;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#my_font {
+    height:50px;
+    width:228px;
+    font-size: 24pt;
+    font-weight: 500;
+    padding-top:30px;
+    padding-bottom:30px;
+    text-align: center;
+}
+
+/* This section styles the right 3 panels */
+.right_panel {
+    width: 580px;
+    height: 600px;
+    justify-content:right;
+}
+.top_box, .middle_box, .bottom_box {
+    width: 576px;
+    height: 180px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    display: block;
+}
+.top_box_top, .middle_box_top, .bottom_box_top {
+    height: 80px;
+    width: 530px;
+    margin-left: 20px;
+    margin-top:10px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.word {
+    height:48px;
+    width: 480px;
+    margin-right:20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight:500;
+}
+#person1_text {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+#person2_text {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+#person3_text {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.like_button {
+    height:60px;
+    width:150px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:10px;
+}
+.likes {
+    color: black;
+    background-color: rgb(255, 217, 102);
+    width: 90px;
+    height: 30px;
+    border: 1px solid  black;
+    margin: 10px;
+    font-size: 14pt;
+    text-align: top;
+    font-weight: light;
+    box-shadow: 3px 3px black;
+}
+
+
+/* This part styles the bottom text of each person*/
+.top_box_bottom, .middle_box_bottom, .bottom_box_bottom {
+    width: 530px;
+    height: 80px;
+    margin-left:20px;
+    margin-bottom:10px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start
+}
+#def1, #def2, #def3 {
+    font-size: 14pt;
+}
